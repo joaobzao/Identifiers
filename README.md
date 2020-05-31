@@ -88,8 +88,8 @@ After `generateAccessibilityIdentifiers()` instruction we will have generated th
 * `RaceHeaderCollectionViewCell.startTimeLabel`
 * `RaceHeaderCollectionViewCell.raceStatusLabel`
 
-We are using the class and field names to compose the accessibility identifier name, but we can opt for other pattern
-`<class>.<field>`
+Pattern 👉 `<class>.<field>`
+We are using the class and field names to compose the accessibility identifier name, but we can opt for other pattern.
 
 Check this simple playground with an example of the above [here](https://github.com/joaobzao/Identifiers/blob/master/Identifiable.playground/Contents.swift)
 
@@ -107,3 +107,14 @@ Check this simple playground with an example of the above [here](https://github.
 
 ## Coming next?
 **Using property wrappers to easily add custom accessibility identifiers 💡**
+
+
+
+
+
+
+
+
+
+
+
