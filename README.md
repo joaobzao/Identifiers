@@ -100,5 +100,5 @@ We are using the class and field names to compose the accessibility identifier n
 
 ## To be aware
 * Reflection have impacts on runtime. But since this is turned off for production builds, we don’t event need to bother.
-* Current UITests using accessibility identifiers have to change if the newly adopted pattern don’t match with previous.
-* `let labelList = [UILabel(), UILabel()]`   the implementation above won’t  generate identifiers for this use case but we can make it to work by iterating through this list and assigning default incremental names (ex: class.listname.index)
+* Current UITests using accessibility identifiers might have to be updated in case the newly adopted pattern don’t match with previous.
+* `let labelList = [UILabel(), UILabel()]`   the implementation above won’t  generate identifiers for this use case but it is easy to adapt the identifiable mechanism and make it to work by iterating through the list and assigning default incremental names (ex: class.listname.index)
