@@ -89,6 +89,7 @@ After `generateAccessibilityIdentifiers()` instruction we will have generated th
 * `RaceHeaderCollectionViewCell.raceStatusLabel`
 
 Pattern 👉 `<class>.<field>`
+
 We are using the class and field names to compose the accessibility identifier name, but we can opt for other pattern.
 
 Check this simple playground with an example of the above [here](https://github.com/joaobzao/Identifiers/blob/master/Identifiable.playground/Contents.swift)
