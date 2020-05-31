@@ -10,7 +10,7 @@ Until now, the process to have an accessibility identifier in our project for a 
 * Create a constant with the static name to be assigned later as an accessibility identifier.
 * Assign that to the UIView accessibility identifier property.
 
-::It seems a fairly easy task, and it is indeed. However if we multiply the work above by 100+ UIViews, it starts to feel a bit boring just to think about it.::
+**It seems a fairly easy task, and it is indeed. However if we multiply the work above by 100+ UIViews, it starts to feel a bit boring just to think about it.**
 
 ## Problem
 * Tedious task
