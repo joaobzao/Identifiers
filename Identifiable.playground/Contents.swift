@@ -10,6 +10,7 @@ public struct Identify<T: UIView> {
     public init(wrappedValue: T, identifier: String) {
         self.wrappedValue = wrappedValue
         self.identifier = identifier
+
         setAccessibilityIdentifier()
     }
 
@@ -41,7 +42,7 @@ extension Identifiable {
 
 extension UIView {
     func printIdenfiers() {
-        self.subviews.forEach { print("\($0.accessibilityIdentifier ?? "BOOM")") }
+        self.subviews.forEach { print("\($0.accessibilityIdentifier ?? "🚧 404 - Accessibility Identifier not found for \($0)")") }
     }
 }
 
@@ -50,8 +51,8 @@ class SampleView: Identifiable {
     @Identify(identifier: "Batatas")
     var label = UILabel()
 
-    var container = UIView()
-    var button = UIButton()
+    let container = UIView()
+    let button = UIButton()
 
     init() {
         container.addSubview(label)
