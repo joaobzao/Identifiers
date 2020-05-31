@@ -6,7 +6,7 @@ According to Apple documentation:
 > An identifier can be used to uniquely identify an element in the scripts you write using the UI Automation interfaces. Using an identifier allows you to avoid inappropriately setting or accessing an element’s accessibility label.  
 
 ## How are we implementing it
-Until now, the process to have an accessibility identifier in our project for a **single** UIView component:
+Until now, the process to have an accessibility identifier in our project for a **single** UIView component was:
 * Create a constant with the static name to be assigned later as an accessibility identifier.
 * Assign that to the UIView accessibility identifier property.
 
@@ -50,7 +50,7 @@ public extension Identifiable {
 ### How to use it?
 From now on the only thing we need to do is to make our UIViews `Identifiable`  😃
 
-Whenever we call the `generateAccessibilityIdentifiers()`  all `UIView`  objects in this class is going to have its accessibility identifier created and assigned automagically .
+Whenever we call the `generateAccessibilityIdentifiers()`  all `UIView`  objects in this class are going to have its accessibility identifier created and assigned automagically .
 
 We can also override the `generateAccessibilityIdentifiers`  function in case we want to implement our custom accessibility identifiers.
 
@@ -99,9 +99,9 @@ We are using the class and field names to compose the accessibility identifier n
 * Less error prone and consistency. All identifiers will always use the same pattern, ex: class.fieldname
 
 ## To be aware
-* Reflection have impacts on runtime. But since this is turned off for production builds, we don’t event need to bother.
-* Current UITests using accessibility identifiers might have to be updated in case the newly adopted pattern don’t match with previous.
-* `let labelList = [UILabel(), UILabel()]`   the implementation above won’t  generate identifiers for this use case but it is easy to adapt the identifiable mechanism and make it to work by iterating through the list and assigning default incremental names (ex: class.listname.index)
+* Reflection has impacts on runtime. But since this is turned off for production builds, we don’t event need to bother.
+* Current UITests using accessibility identifiers might have to be updated in case the newly adopted pattern doesn’t match with previous.
+* `let labelList = [UILabel(), UILabel()]`   the implementation above won’t  generate identifiers for this use case but it is easy to adapt the identifiable mechanism and make it work by iterating through the list and assigning default incremental names (ex: class.listname.index)
 
 ## Coming next?
 **Using property wrappers to easily add custom accessibility identifiers 💡**
