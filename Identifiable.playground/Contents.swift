@@ -1,24 +1,5 @@
 import UIKit
 
-@propertyWrapper
-public struct Identify<T: UIView> {
-
-    public let identifier: String
-
-    public var wrappedValue: T
-
-    public init(wrappedValue: T, identifier: String) {
-        self.wrappedValue = wrappedValue
-        self.identifier = identifier
-
-        setAccessibilityIdentifier()
-    }
-
-    func setAccessibilityIdentifier() {
-        wrappedValue.accessibilityIdentifier = identifier
-    }
-}
-
 protocol Identifiable {
     func generateAccessibilityIdentifiers()
 }
@@ -48,11 +29,9 @@ extension UIView {
 
 class SampleView: Identifiable {
 
-    @Identify(identifier: "Batatas")
-    var label = UILabel()
-
     let container = UIView()
     let button = UIButton()
+    let label = UILabel()
 
     init() {
         container.addSubview(label)
