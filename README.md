@@ -49,6 +49,7 @@ public extension Identifiable {
 
 ### How to use it?
 From now on the only thing we need to do is to make our UIViews `Identifiable`  😃
+
 Whenever we call the `generateAccessibilityIdentifiers()`  all `UIView`  objects in this class is going to have its accessibility identifier created and assigned automagically .
 
 We can also override the `generateAccessibilityIdentifiers`  function in case we want to implement our custom accessibility identifiers.
@@ -101,7 +102,3 @@ We are using the class and field names to compose the accessibility identifier n
 * Reflection have impacts on runtime. But since this is turned off for production builds, we don’t event need to bother.
 * Current UITests using accessibility identifiers have to change if the newly adopted pattern don’t match with previous.
 * `let labelList = [UILabel(), UILabel()]`   the implementation above won’t  generate identifiers for this use case but we can make it to work by iterating through this list and assigning default incremental names (ex: class.listname.index)
-
-# Project: `PPFramework`
-Branch: `poc/accessibility-identifiers-identifiable`
-File: `RaceHeaderCollectionViewCell `
