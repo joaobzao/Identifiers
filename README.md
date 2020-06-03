@@ -1,6 +1,13 @@
-# iOS Accessibility Identifiers
+# Generate identifiers for easy UI testing
 
-###### #ios-tech #swift #reflection #ui-testing
+###### #ppb #ios-tech #swift #reflection #ui-testing
+
+Typically a graphical user interface(GUI) application has a companion GUI or simply UI testing process attached to it which is responsible to ensure that the UI of the product meets its specifications. 
+
+One of the most common things about UI testing is the need to assign **identifiers** to UI elements, usually called views. 
+Usually these identifiers are assigned manually which easily scales to a painful process. 
+
+This article aims to describe an approach to get rid of that burden.
 
 ## What is an accessibility identifier 
 
@@ -12,10 +19,10 @@ According to Apple documentation:
 
 ## How are we implementing it
 
-Until now, the process to have an accessibility identifier in our project for a **single** UIView component was:
+Until now, the process to have an accessibility identifier in our project for a **single** `UIView` component was:
 
 * Create a constant with the static name to be assigned later as an accessibility identifier.
-* Assign that to the UIView accessibility identifier property.
+* Assign that to the `UIView` accessibility identifier property.
 
 **It seems a fairly easy task, and it is indeed. However if we multiply the work above by 100+ UIViews, it starts to feel a bit boring just to think about it.**
 
@@ -83,8 +90,6 @@ public class RaceHeaderCollectionViewCell: BaseCollectionViewCell, Identifiable 
 }
 ```
 
-We can also override the `generateAccessibilityIdentifiers`  function in case we want to implement our custom accessibility identifiers.
-
 After `generateAccessibilityIdentifiers()` instruction we will have generated the following accessibility identifiers:
 
 * `RaceHeaderCollectionViewCell.raceStatusImageView`
@@ -95,6 +100,8 @@ Pattern 👉 `<class>.<field>`
 
 We are using the class and field names to compose the accessibility identifier name, but we can opt for other pattern.
 
+We can also override the `generateAccessibilityIdentifiers`  function in case we want to implement our custom accessibility identifiers.
+
 Check this simple playground with an example of the above [here](https://github.com/joaobzao/Identifiers/blob/master/Identifiable.playground/Contents.swift)
 
 ## Advantages
@@ -102,7 +109,7 @@ Check this simple playground with an example of the above [here](https://github.
 * Easy to use and adapt 
 * Much faster to implement 
 * Way better to identify if we are missing identifiers or not.
-* Boilerplate reduced to a minimum, no need to create all those constants nor assign them for each UIView component.
+* Boilerplate reduced to a minimum, no need to create all those constants nor assign them for each `UIView` component.
 * Less error prone and consistency. All identifiers will always use the same pattern, ex: class.fieldname
 
 ## To be aware
