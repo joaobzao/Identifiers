@@ -1,13 +1,13 @@
-# Generate identifiers for easy UI testing
+# Identifiers for UI testing: a reflection based approach
 
-###### #ppb #ios-tech #swift #reflection #ui-testing
+###### #ppbtech #ios-tech #swift #reflection #ui-testing
 
 Typically a graphical user interface(GUI) application has a companion GUI or simply UI testing process attached to it which is responsible to ensure that the UI of the product meets its specifications. 
 
 One of the most common things about UI testing is the need to assign **identifiers** to UI elements, usually called views. 
 Usually these identifiers are assigned manually which easily scales to a painful process. 
 
-This article aims to describe an approach to get rid of that burden.
+This article aims to describe an approach to get rid of that burden using reflection, which allows us to do runtime inspections.
 
 ## What is an accessibility identifier 
 
@@ -121,14 +121,3 @@ Check this simple playground with an example of the above [here](https://github.
 ## Coming next?
 
 * **Using property wrappers to easily add custom accessibility identifiers 💡**
-
-
-
-
-
-
-
-
-
-
-
