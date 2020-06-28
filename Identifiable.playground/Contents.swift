@@ -4,8 +4,7 @@ import UIKit
 public struct Identify<T: UIView> {
 
     public let identifier: String
-
-    public var wrappedValue: T
+    public let wrappedValue: T
 
     public init(wrappedValue: T, identifier: String) {
         self.wrappedValue = wrappedValue
