@@ -3,8 +3,8 @@ import UIKit
 @propertyWrapper
 public struct Identify<T: UIView> {
 
-    public let identifier: String
     public let wrappedValue: T
+    public let identifier: String
 
     public init(wrappedValue: T, identifier: String) {
         self.wrappedValue = wrappedValue

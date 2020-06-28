@@ -1,6 +1,26 @@
-# iOS Accessibility Identifiers ♥️ Swift
+# Identifiers for UI testing: using property wrappers ♥️ Swift
 #ios-tech
-## What is an accessibility identifier 
+
+Welcome to the second part of this **Identifiers for UI testing** series. In the previous part we have covered an effortlessly way to generate and assign identifiers to UI views in a neat way using a reflection based approach. 
+
+If you haven't already gone through the first part, I would recommend you to give a look [here](https://ppb.technology/2020/06/19/identifiers-for-ui-testing-a-reflection-based-approach/).
+
+In this follow up article of the series, we are going to discuss how to add custom identifiers using property wrappers, a Swift 5.1 language feature.
+
+## What is a property wrapper
+
+Property Wrappers were [pitched to the Swift forums](https://forums.swift.org/t/pitch-property-delegates/21895) back in March of 2019 by the Swift Core Team member Douglas Gregor. Few months later, at WWDC 2019, Apple announced SwiftUI (their declarative UI Framework) which makes extensive use of property wrappers such as `@State`, `@Binding`, `@EnvironmentObject`... 
+
+With Swift 5.1 release we can now implement our own custom wrappers without making the language become more complex.
+
+There is an extensive description of the language feature on the [swift evolution proposal](https://github.com/apple/swift-evolution/blob/master/proposals/0258-property-wrappers.md).But essentially a property wrapper is a type that wraps a given value in order to attach additional logic to it. Property wrappers can be defined by using `struct`, `class` or `enum` and it can be used when we declare properties inside of those types as well.
+
+According to Apple documentation: 
+
+> A property wrapper adds a layer of separation between code that manages how a property is stored and the code that defines a property.
+
+## 
+
 An accessibility identifier is a string that identifies an UIView element. This identification is crucial to UI testing since it allows us to identify the UIView elements easily.
 According to Apple documentation:
 > An identifier can be used to uniquely identify an element in the scripts you write using the UI Automation interfaces. Using an identifier allows you to avoid inappropriately setting or accessing an element’s accessibility label.  
