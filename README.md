@@ -1,7 +1,7 @@
-# Identifiers for UI testing: using property wrappers ♥️ Swift
+# Identifiers for UI testing: using property wrappers
 #ios-tech
 
-Welcome to the second part of this **Identifiers for UI testing** series. In the previous part we have covered an effortlessly way to generate and assign identifiers to UI views in a neat way using a reflection based approach. 
+Welcome to the second part of this **Identifiers for UI testing** series. In the previous part we have covered an effortlessly way to generate and assign identifiers to UI views using a reflection based approach. 
 
 If you haven't already gone through the first part, I would recommend you to give a look [here](https://ppb.technology/2020/06/19/identifiers-for-ui-testing-a-reflection-based-approach/).
 
