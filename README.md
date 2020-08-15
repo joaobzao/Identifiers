@@ -120,4 +120,4 @@ Check this simple playground with an example of the above [here](https://github.
 
 ## Coming next?
 
-* **Using property wrappers to easily add custom accessibility identifiers 💡**
+* **Using property wrappers to easily add custom accessibility identifiers 💡 ([checkout property-wrappers branch](https://github.com/joaobzao/Identifiers/tree/property-wrappers))**
