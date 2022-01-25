@@ -12,13 +12,12 @@ final class IdentifiableTests: XCTestCase, Identifiable {
         // Given
 
         let container = UIView()
-
-        // When
-
         container.addSubview(label)
         container.addSubview(button)
         container.addSubview(textView)
         container.addSubview(imageView)
+
+        // When
 
         generateAccessibilityIdentifiers()
 
